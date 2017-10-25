@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+</head>
+<body>
+<div>
+	<label><strong>Nome</strong></label>
+	<label for="User"><span style="padding-left:104px"><strong>Sobrenome</strong></span>
+	</label>
+</div>
+	<input type="text" id="DigitarNome"  onkeyup="myFunction()" />
+	<input type="text" id="DigitarSobrenome" onkeyup="myFunction()" />
+
+<p><span id="ResultadoN"></span> <span id="ResultadoS"</span></p>
+<script >
+/* Adiciona a Função*/
+	function myFunction(){
+	/*Cria uma variável que recebe o texto digitado ni input e retorna abaixo*/
+	var A = document.getElementById("DigitarNome").value;
+	document.getElementById("ResultadoN").innerHTML = A;
+	/*Cria uma variável que recebe o texto digitado ni input e retorna abaixo*/
+	var B = document.getElementById("DigitarSobrenome").value;
+	document.getElementById("ResultadoS").innerHTML = B;
+	}
+</script>
+</body>
+
+</html>
