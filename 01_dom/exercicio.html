@@ -2,27 +2,37 @@
 <html>
 <head>
 
-
+<style type="text/css">
+	.div-campo{
+		float:left;
+		margin-right: 20px;		
+	}
+</style>
 </head>
 <body>
-<div>
-	<label><strong>Nome</strong></label>
-	<label for="User"><span style="padding-left:104px"><strong>Sobrenome</strong></span>
+<div class="div-campo">
+	<label for="nome"><strong>Nome</strong></label>
+	<br/>
+	<input type="text" id="nome"  onkeyup="onTextChanged()" />
+
+</div>
+<div class="div-campo">
+	<label>
+		<strong>Sobrenome</strong>
+		<br/>
+		<input type="text" id="sobrenome" onkeyup="onTextChanged()" />
 	</label>
 </div>
-	<input type="text" id="DigitarNome"  onkeyup="myFunction()" />
-	<input type="text" id="DigitarSobrenome" onkeyup="myFunction()" />
-
-<p><span id="ResultadoN"></span> <span id="ResultadoS"</span></p>
+<br/><br/>
+<div id="nome-completo" style="clear:both"></div>
 <script >
 /* Adiciona a Função*/
-	function myFunction(){
-	/*Cria uma variável que recebe o texto digitado ni input e retorna abaixo*/
-	var A = document.getElementById("DigitarNome").value;
-	document.getElementById("ResultadoN").innerHTML = A;
-	/*Cria uma variável que recebe o texto digitado ni input e retorna abaixo*/
-	var B = document.getElementById("DigitarSobrenome").value;
-	document.getElementById("ResultadoS").innerHTML = B;
+	function onTextChanged(){
+		/*Cria uma variável que recebe o texto digitado ni input e retorna abaixo*/
+		var nome = document.getElementById("nome").value;
+		/*Cria uma variável que recebe o texto digitado ni input e retorna abaixo*/
+		var sobrenome = document.getElementById("sobrenome").value;
+		document.getElementById("nome-completo").innerHTML = nome + ' ' + sobrenome;
 	}
 </script>
 </body>
